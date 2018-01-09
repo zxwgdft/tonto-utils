@@ -21,6 +21,7 @@ public class SimpleMessageTemplate implements MessageTemplate {
 		return template;
 	}
 
+	@SuppressWarnings("resource")
 	@Override
 	public String createMessage(Object... args) {
 		return new Formatter().format(template, args).toString();
